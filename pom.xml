@@ -29,6 +29,7 @@
       <url>dav:http://localhost:8081/nexus/content/sites/site/</url>
     </site>
   </distributionManagement>
+  
   <build>
     <plugins>
       <plugin>
