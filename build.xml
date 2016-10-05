@@ -1,33 +1,5 @@
 <?xml version="1.0"?>
 <project name="test" default="create"  basedir=".">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Default target name "create" but you want perform other target "delete"
-
-
 <?xmlme="clean">
         <delete dir="build"/>
     </target>
