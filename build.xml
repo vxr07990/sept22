@@ -1,7 +1,3 @@
-reate  ant build.xml file :
-
-For creating Directories:
-
 <?xml version="1.0"?>
 <project name="test" default="create"  basedir=".">
 
