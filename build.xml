@@ -1,0 +1,74 @@
+reate  ant build.xml file :
+
+For creating Directories:
+
+<?xml version="1.0"?>
+<project name="test" default="create"  basedir=".">
+
+   <target name="create">
+      <mkdir dir="d1"/>
+        <mkdir dir="d2"/>
+   </target>
+
+</project>
+
+
+
+For deleting  Directories:
+
+<?xml version="1.0"?>
+<project name="test" default="delete"  basedir=".">
+
+   <target name="delete">
+      <delete dir="d1"/>
+        <delete dir="d2"/>
+   </target>
+
+</project>
+
+
+
+
+Default target name "create" but you want perform other target "delete"
+
+
+<?xml version="1.0"?>
+<project name="test" default="create"  basedir=".">
+
+   <target name="create">
+      <delete dir="d1"/>
+        <delete dir="d2"/>
+   </target>
+
+</project>
+
+
+ant delete 
+
+
+
+
+
+Terget depend on other target 
+
+
+<?xml version="1.0"?>
+<project name="test" default="create"  basedir=".">
+
+   <target name="create" depends="delete">
+      <mkdir dir="d1"/>
+        <mkdir dir="d2"/>
+   </target>
+
+
+
+<target name="delete">
+<delete dir="d1"/>
+<delete dir="d2"/>
+</target>
+
+
+</project>
+
+
+
