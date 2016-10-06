@@ -5,26 +5,26 @@ For creating Directories:
 <?xml version="1.0"?>
 <project name="test" default="create"  basedir=".">
 
-   <target name="create">
-      <mkdir dir="d1"/>
-        <mkdir dir="d2"/>
-   </target>
-
-</project>
 
 
 
-For deleting  Directories:
 
-<?xml version="1.0"?>
-<project name="test" default="delete"  basedir=".">
 
-   <target name="delete">
-      <delete dir="d1"/>
-        <delete dir="d2"/>
-   </target>
 
-</project>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -32,7 +32,29 @@ For deleting  Directories:
 Default target name "create" but you want perform other target "delete"
 
 
-<?xml version="1.0"?>
+<?xmlme="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="build/jar"/>
+        <jar destfile="build/jar/HelloWorld.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="oata.HelloWorld"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run">
+        <java jar="build/jar/HelloWorld.jar" fork="true"/>
+    </target>
+
+</project> version="1.0"?>
 <project name="test" default="create"  basedir=".">
 
    <target name="create">
